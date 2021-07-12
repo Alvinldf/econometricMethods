@@ -1,3 +1,3 @@
-from formulas import *
+from .formulas import *
 
 

@@ -15,18 +15,9 @@ import statsmodels.api as sm
 warnings.filterwarnings("ignore")
 
 
-def create_png(array, name):
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
-    ax.plot(array)
-    fig.savefig(name)
-
-
-#def white_noise(mu=0, sigma=1, size=100):
-#    s = np.random.normal(mu, sigma, size=size)
-#    array = sns.histplot(s, bins=40, kde=True)
-#    #create_png(array, "img.png")
-#    create_png(s, "img.png")
+def white_noise(mu=0, sigma=1, size=100):
+    s = np.random.normal(mu, sigma, size=size)
+    array = sns.lineplot(data=s)
 
 
 def process_ar(time, a_0, a_1, y_inicial):
@@ -39,8 +30,7 @@ def process_ar(time, a_0, a_1, y_inicial):
             y = a_0 + a_1 * y + np.random.randn()
             s.append(y)
     s = pd.Series(s)
-    create_png(s, "example2.png")
-
+    return s.plot()
 
 def plotACFandPACF(data, lags= 20):
     fig, (ax1, ax2) = plt.subplots(1,2, figsize= (16,5))

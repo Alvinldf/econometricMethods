@@ -1,0 +1,9 @@
+README.md
+setup.py
+econometricMethodsESAN.egg-info/PKG-INFO
+econometricMethodsESAN.egg-info/SOURCES.txt
+econometricMethodsESAN.egg-info/dependency_links.txt
+econometricMethodsESAN.egg-info/requires.txt
+econometricMethodsESAN.egg-info/top_level.txt
+economics/__init__.py
+economics/formulas.py
